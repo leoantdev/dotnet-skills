@@ -1,0 +1,4 @@
+interface:
+  display_name: ".NET API Feature Slice"
+  short_description: "Plan and build Minimal API feature slices"
+  default_prompt: "Use $dotnet-api-feature-slice to add or revise a Minimal API feature slice."

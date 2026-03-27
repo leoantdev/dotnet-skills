@@ -1,0 +1,4 @@
+interface:
+  display_name: ".NET API Best Practices"
+  short_description: "Guide API design, reliability, and EF Core"
+  default_prompt: "Use $dotnet-api-best-practices to recommend the best approach for a .NET backend API change."

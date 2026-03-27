@@ -1,0 +1,4 @@
+interface:
+  display_name: "EF Core Schema Change"
+  short_description: "Plan EF Core model and migration changes"
+  default_prompt: "Use $efcore-schema-change to update EF Core schema, queries, or migrations safely."

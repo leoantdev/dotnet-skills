@@ -1,0 +1,4 @@
+interface:
+  display_name: ".NET API Dos and Don'ts"
+  short_description: "Run a quick .NET API anti-pattern check"
+  default_prompt: "Use $dotnet-api-dos-donts to sanity-check a .NET backend API design or implementation."

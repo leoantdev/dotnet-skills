@@ -1,0 +1,4 @@
+interface:
+  display_name: ".NET API Change Verification"
+  short_description: "Choose verification for backend API changes"
+  default_prompt: "Use $dotnet-api-change-verification to choose and run verification for a backend API change."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenAPI Contract Sync"
+  short_description: "Keep API behavior and OpenAPI in sync"
+  default_prompt: "Use $openapi-contract-sync to align endpoint behavior with OpenAPI metadata."

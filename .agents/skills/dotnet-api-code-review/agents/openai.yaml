@@ -1,0 +1,4 @@
+interface:
+  display_name: ".NET API Code Review"
+  short_description: "Review backend API diffs for production risk"
+  default_prompt: "Use $dotnet-api-code-review to review a .NET backend API change for bugs and regressions."
