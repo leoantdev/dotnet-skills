@@ -1,38 +1,26 @@
-# .NET API Skills Library
-
-This repository stores reusable Codex skills for C#/.NET backend APIs. Canonical skills live in `.agents/skills/`. Shared guidance lives in `.agents/references/`.
+# .NET API Skills
 
 ## Defaults
 
-- Assume ASP.NET Core Minimal APIs on .NET 10 unless the target repository says otherwise.
-- Prefer vertical slices with feature-local endpoints, request models, response models, validators, and handlers.
-- Assume EF Core first for persistence changes.
-- Treat OpenAPI/Swagger visibility as part of the API contract.
-- Prefer integration-heavy verification for behavior changes.
+- Assume .NET 10, ASP.NET Core Minimal APIs, vertical slices, and EF Core first unless the target repository says otherwise.
+- Treat OpenAPI as part of the contract and prefer integration-heavy verification for behavior changes.
 
 ## Skill Routing
 
-- Use `$dotnet-api-feature-slice` for endpoint, DTO, validator, handler, and feature-flow changes.
-- Use `$efcore-schema-change` for entity, configuration, migration, query-shape, and transaction changes.
-- Use `$openapi-contract-sync` when request or response contracts, status codes, auth requirements, or endpoint metadata change.
+- Use `$dotnet-api-feature-slice` for endpoint, DTO, validation, handler, or feature-flow changes.
+- Use `$efcore-schema-change` for entity, configuration, migration, query, or transaction changes.
+- Use `$openapi-contract-sync` for route, contract, status code, auth, or metadata changes.
 - Use `$dotnet-api-change-verification` after runtime, persistence, or contract changes.
-- Use `$dotnet-api-best-practices` before non-trivial API design or persistence decisions.
-- Use `$dotnet-api-dos-donts` for a fast anti-pattern check before landing a design or implementation.
-- Use `$dotnet-api-code-review` when the user asks for review or when a substantial backend change is ready for handoff.
+- Use `$dotnet-api-best-practices` before non-trivial API or persistence decisions.
+- Use `$dotnet-api-dos-donts` for a quick anti-pattern check.
+- Use `$dotnet-api-code-review` for review requests or substantial backend diffs.
 
-## Authoring Rules
+## Skill Rules
 
-- Keep each skill narrowly scoped.
-- Keep `SKILL.md` frontmatter limited to `name` and `description`.
-- Treat `description` as the trigger contract. State what the skill does and when to use it.
-- Keep `SKILL.md` bodies concise. Move detailed guidance into `.agents/references/` and link to it directly.
-- Add scripts only when the same deterministic mechanics would otherwise be rediscovered repeatedly.
-- Keep `agents/openai.yaml` aligned with the skill name, purpose, and default prompt.
-- When adding or revising review guidance, preserve a production-risk-first review style: findings first, ordered by severity, with file references.
+- Keep skills narrow.
+- Keep `SKILL.md` frontmatter to `name` and `description`; use `description` as the trigger contract.
+- Keep bodies concise, move shared detail to `.agents/references/`, and add scripts only for repeated deterministic work.
 
 ## Validation
 
-- Validate every changed skill before landing it.
-- If the Codex skill validator is available, run it against each changed skill directory.
-- If the validator is unavailable, manually verify folder naming, frontmatter validity, relative links, and `agents/openai.yaml` coherence.
-
+- Validate changed skills with the bundled validator when available; otherwise manually check frontmatter, links, folder naming, and `agents/openai.yaml`.
